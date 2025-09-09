@@ -1,0 +1,48 @@
+<template>
+    <!-- Students Table -->
+    <lightning-card title="Students" class="slds-m-around_medium">
+        <div class="slds-p-around_medium">
+            <lightning-datatable 
+                key-field="id"
+                data={students}
+                columns={studentColumns}
+                hide-checkbox-column="true">
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+
+    <!-- Contacts Table -->
+    <lightning-card title="Contacts" class="slds-m-around_medium">
+        <div class="slds-p-around_medium">
+            <lightning-datatable 
+                key-field="id"
+                data={contacts}
+                columns={contactColumns}
+                hide-checkbox-column="true">
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+
+    <!-- Export Options -->
+    <lightning-card title="Export Options" class="slds-m-around_medium">
+        <div class="slds-p-around_medium">
+            <lightning-input type="checkbox" 
+                             label="Export Students" 
+                             value="students" 
+                             onchange={handleSheetSelection}>
+            </lightning-input>
+
+            <lightning-input type="checkbox" 
+                             label="Export Contacts" 
+                             value="contacts" 
+                             onchange={handleSheetSelection}>
+            </lightning-input>
+
+            <lightning-button variant="brand" 
+                              label="Export to Excel" 
+                              class="slds-m-top_medium"
+                              onclick={exportToExcel}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>
