@@ -7,7 +7,7 @@ import getContacts from '@salesforce/apex/ContactController.getContacts';
 export default class StudentList extends LightningElement {
     sheetjsInitialized = false;
 
-    // Data
+    // Dataa
     contacts = [];
     students = [];
 
